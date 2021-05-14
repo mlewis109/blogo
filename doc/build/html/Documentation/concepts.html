@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Concepts &mdash; Blogo 0.9.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Quickstart" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Blogo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cross-sections">Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pen-up-and-down">Pen Up and Down</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-third-dimension">The Third Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rotating">Rotating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cross-section-adjustments">Cross Section Adjustments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sideways">Sideways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#putting-together-turns">Putting Together Turns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-around">Moving Around</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textures">Textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filling-areas">Filling Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expanding-the-cross-section">Expanding the Cross Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expanding-the-cross-section-more">Expanding the Cross Section More</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#and-beyond">And Beyond…</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tipsntricks.html">Tips ‘n’ Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="problems.html">Potential Problems</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Modules/blogo.html">Blogo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modules/blogo_utils.html">Blogo Utils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modules/helpers.html">Helper Functions</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blogo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Concepts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Documentation/concepts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="concepts">
+<h1>Concepts<a class="headerlink" href="#concepts" title="Permalink to this headline">¶</a></h1>
+<p>This page explains how to think about a drawing things in Blogo.</p>
+<div class="section" id="cross-sections">
+<h2>Cross Sections<a class="headerlink" href="#cross-sections" title="Permalink to this headline">¶</a></h2>
+<p>Blogo commands control the movement of a cross section.  The most simple cross section is a square:</p>
+<img alt="../_images/00-0.png" src="../_images/00-0.png" />
+<p>If a forward command is given, then this square is moved foward, leaving a trail behind to construct
+a cuboid:</p>
+<img alt="../_images/00-1.png" src="../_images/00-1.png" />
+<p>The cross section can be any shape, such as the more complicated I shape shown below.  This image also
+demonstates the shape going forward, then right by 90° and then forward again.</p>
+<img alt="../_images/00-2.png" src="../_images/00-2.png" />
+</div>
+<div class="section" id="pen-up-and-down">
+<h2>Pen Up and Down<a class="headerlink" href="#pen-up-and-down" title="Permalink to this headline">¶</a></h2>
+<p>A trail is only left behind when the pen is down.  If we lift the pen up, we can leave gaps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_up</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_down</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_up</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_down</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>produces:</p>
+<img alt="../_images/01-0.png" src="../_images/01-0.png" />
+</div>
+<div class="section" id="the-third-dimension">
+<h2>The Third Dimension<a class="headerlink" href="#the-third-dimension" title="Permalink to this headline">¶</a></h2>
+<p>As well as moving the trail left and right, it can go up and down as well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">rt</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to produce:</p>
+<img alt="../_images/02-0.png" src="../_images/02-0.png" />
+</div>
+<div class="section" id="rotating">
+<h2>Rotating<a class="headerlink" href="#rotating" title="Permalink to this headline">¶</a></h2>
+<p>The cross section can be rotated (which will change which way is up):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">clockwise</span><span class="p">(</span><span class="mf">22.5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">clockwise</span><span class="p">(</span><span class="mf">22.5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">clockwise</span><span class="p">(</span><span class="mf">22.5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">clockwise</span><span class="p">(</span><span class="mf">22.5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>with an I-beam cross section, gives:</p>
+<img alt="../_images/03-0.png" src="../_images/03-0.png" />
+</div>
+<div class="section" id="cross-section-adjustments">
+<h2>Cross Section Adjustments<a class="headerlink" href="#cross-section-adjustments" title="Permalink to this headline">¶</a></h2>
+<p>The cross section can be tilted (without affecting which way is up):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_up</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">tilt_h</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_down</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_up</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">tilt_h</span><span class="p">(</span><span class="o">-</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">tilt_v</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_down</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_up</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">tilt_v</span><span class="p">(</span><span class="o">-</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">tilt_r</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_down</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>gives:</p>
+<img alt="../_images/04-0.png" src="../_images/04-0.png" />
+</div>
+<div class="section" id="sideways">
+<h2>Sideways<a class="headerlink" href="#sideways" title="Permalink to this headline">¶</a></h2>
+<p>The cross section can be moved to the side without turning (note pen being up or down affecting the trail):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">strafe</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_up</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">strafe_v</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">pen_down</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to give:</p>
+<img alt="../_images/05-0.png" src="../_images/05-0.png" />
+</div>
+<div class="section" id="putting-together-turns">
+<h2>Putting Together Turns<a class="headerlink" href="#putting-together-turns" title="Permalink to this headline">¶</a></h2>
+<p>Many small turns can be put together to make a smooth surface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">angle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">360</span><span class="p">):</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">rt</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>resulting in a circle:</p>
+<img alt="../_images/06-0.png" src="../_images/06-0.png" />
+</div>
+<div class="section" id="moving-around">
+<h2>Moving Around<a class="headerlink" href="#moving-around" title="Permalink to this headline">¶</a></h2>
+<p>The trails can also be created by absolute jumps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">set_pos</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">pen_up</span><span class="p">()</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">set_xyz</span><span class="p">(</span><span class="o">-</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="o">-</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="o">-</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">pen_down</span><span class="p">()</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>giving random blocks and lines:</p>
+<img alt="../_images/07-0.png" src="../_images/07-0.png" />
+</div>
+<div class="section" id="textures">
+<h2>Textures<a class="headerlink" href="#textures" title="Permalink to this headline">¶</a></h2>
+<p>It is very simple to add textures to objects, either by colour or as an image:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;./textures/grass.png&quot;</span><span class="p">))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which looks like this:</p>
+<img alt="../_images/08-0.png" src="../_images/08-0.png" />
+</div>
+<div class="section" id="filling-areas">
+<h2>Filling Areas<a class="headerlink" href="#filling-areas" title="Permalink to this headline">¶</a></h2>
+<p>Shapes drawn can also be easily filled in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;relative&quot;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;relative&quot;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">rt</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>shows:</p>
+<img alt="../_images/09-0.png" src="../_images/09-0.png" />
+</div>
+<div class="section" id="expanding-the-cross-section">
+<h2>Expanding the Cross Section<a class="headerlink" href="#expanding-the-cross-section" title="Permalink to this headline">¶</a></h2>
+<p>An important feature to be able to make complex shapes without having to manually enter a cross section
+is to be able to change the size of the cross section:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="s2">&quot;above&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="s2">&quot;below&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="s2">&quot;sides&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="s2">&quot;verticals&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">set_texture</span><span class="p">((</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(),</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()))</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which produces:</p>
+<img alt="../_images/10-0.png" src="../_images/10-0.png" />
+</div>
+<div class="section" id="expanding-the-cross-section-more">
+<h2>Expanding the Cross Section More<a class="headerlink" href="#expanding-the-cross-section-more" title="Permalink to this headline">¶</a></h2>
+<p>As well as static size expansions, the width can be specified in a function.  This allows complex
+shapes to be constructed with very little code.  If we have two simple functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">height_func</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">absolute_length_along</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;full_length&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">absolute_length_along</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">width_func</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">relative_length_along</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="s2">&quot;relative_length&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">relative_length_along</span> <span class="o">*</span> <span class="n">pi</span><span class="p">),</span> <span class="s2">&quot;*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These can be set to modify the square cross section:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">add_width_func</span><span class="p">(</span><span class="s2">&quot;above&quot;</span><span class="p">,</span> <span class="n">height_func</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">add_width_func</span><span class="p">(</span><span class="s2">&quot;sides&quot;</span><span class="p">,</span> <span class="n">width_func</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>giving:</p>
+<img alt="../_images/11-0.png" src="../_images/11-0.png" />
+<p>There are also two built in width functions, which allow us to curve the two ends of a line in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">turtle</span><span class="o">.</span><span class="n">add_width_func</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="s2">&quot;curve_start&quot;</span><span class="p">,</span> <span class="n">curve_length</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">eccentricity</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">add_width_func</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="s2">&quot;curve_end&quot;</span><span class="p">,</span> <span class="n">curve_length</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With the eccentricity value specifying whether the curve should be circular or just a straight line:</p>
+<img alt="../_images/11-1.png" src="../_images/11-1.png" />
+</div>
+<div class="section" id="and-beyond">
+<h2>And Beyond…<a class="headerlink" href="#and-beyond" title="Permalink to this headline">¶</a></h2>
+<p>Putting all those concepts together allows for complex objects and structures to be built up.
+With the ability to tweak them and make changes simply.</p>
+<img alt="../_images/12-0.png" src="../_images/12-0.png" />
+<img alt="../_images/12-1.png" src="../_images/12-1.png" />
+<img alt="../_images/12-2.png" src="../_images/12-2.png" />
+<img alt="../_images/12-3.png" src="../_images/12-3.png" />
+<img alt="../_images/12-4.png" src="../_images/12-4.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Author
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
