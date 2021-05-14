@@ -10,5 +10,9 @@ The interface is designed to make it simple to do things that people are likely 
 
 ## Getting Started
 
-Assuming you already have Blender installed, simply copy the files from blogo/src/ into <blender_install_dir>/scripts/ and restart Blender.  Now it is installed and can be used.  Check the quickstart in the help for more details and what to do to make shapes.
+Assuming you already have Blender installed, simply copy the files from blogo/src/ into <blender_install_dir>/scripts/ and restart Blender.  Now it is installed and can be used.  Check the [quickstart](https://blogo.readthedocs.io/en/latest/Documentation/quickstart.html) in the help for more details and what to do to make shapes.
+
+## Documentation
+
+Is available at https://blogo.readthedocs.io/en/latest/index.html
 
