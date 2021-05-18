@@ -163,10 +163,1230 @@
             
   <div class="section" id="module-blogo">
 <span id="blogo"></span><h1>Blogo<a class="headerlink" href="#module-blogo" title="Permalink to this headline">¶</a></h1>
-<dl class="py attribute">
+<dl class="py class">
 <dt id="blogo.Blogo">
-<code class="sig-prename descclassname">blogo.</code><code class="sig-name descname">Blogo</code><a class="headerlink" href="#blogo.Blogo" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<em class="property">class </em><code class="sig-prename descclassname">blogo.</code><code class="sig-name descname">Blogo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Blogo'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class which describes a turtle and has functions to move it in space.</p>
+<dl class="py method">
+<dt id="blogo.Blogo.add_cap">
+<code class="sig-name descname">add_cap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">is_start_cap</span></em>, <em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.add_cap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put in a cap in the shape of the current cross section, facing forwards or backwards</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>is_start_cap</strong> – If <cite>True</cite> then the cap will face backwards, otherwise forwards</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.add_end_cap">
+<code class="sig-name descname">add_end_cap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.add_end_cap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put in a cap in the shape of the current cross section, facing forwards</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.add_follower">
+<code class="sig-name descname">add_follower</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turtle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.add_follower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a follower turtle to this turtle.</p>
+<p>Each action which causes a turn or a forward to the current turtle will also be made to the follower turtle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>turtle</strong> (<a class="reference internal" href="#blogo.Blogo" title="blogo.Blogo"><em>Blogo</em></a>) – The turtle who should follow the current turtle.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.add_gap">
+<code class="sig-name descname">add_gap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">start_height</span></em>, <em class="sig-param"><span class="n">end_height</span></em>, <em class="sig-param"><span class="n">widths1</span><span class="o">=</span><span class="default_value">('above', 'left', 'right')</span></em>, <em class="sig-param"><span class="n">widths2</span><span class="o">=</span><span class="default_value">('below', 'left', 'right')</span></em>, <em class="sig-param"><span class="n">gap_cs_shape</span><span class="o">=</span><span class="default_value">'square'</span></em>, <em class="sig-param"><span class="n">cs_splitting</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.add_gap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a window in the middle of a cross section</p>
+<p>The gap is made by squashing the original cross section to the bottom and adding in a new cross section above.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the new cross section area</p></li>
+<li><p><strong>start_height</strong> – The height of the bottom of the gap</p></li>
+<li><p><strong>end_height</strong> – The height of the top of the gap</p></li>
+<li><p><strong>widths1</strong> – The edges of the original cross section to copy into the new cross section (default (‘above’, ‘left’, ‘right’) - i.e. the new cross section goes at the top, with the same width)</p></li>
+<li><p><strong>widths2</strong> – The edges of the original cross section to leave in the original cross section (default (‘below’, ‘left’, ‘right’) - i.e. the original cross section goes at the bottom, with the same width)</p></li>
+<li><p><strong>gap_cs_shape</strong> – Cross section shape to make the additional cross section (Default: ‘square’)</p></li>
+<li><p><strong>cs_splitting</strong> – The name of the cross section to split.  (Default “”, i.e. the main cross section)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.add_start_cap">
+<code class="sig-name descname">add_start_cap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.add_start_cap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put in a cap in the shape of the current cross section, facing backwards</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.add_width_func">
+<code class="sig-name descname">add_width_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">func</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.add_width_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add either a width function to a side</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The side of the cross section to deal with.  This can be a single side, (‘left’, ‘right’, ‘above’, ‘below’) or it can be a list of those sides or it can be a description of multiple sides (‘sides’, ‘verticals’, ‘all’)</p></li>
+<li><p><strong>func</strong> – The function to add, or <cite>None</cite> to remove all functions</p></li>
+<li><p><strong>kwargs</strong> – User data to pass on to the function when called</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.anticlockwise">
+<code class="sig-name descname">anticlockwise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.anticlockwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate anti-clockwise by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to rotate anti-clockwise by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.arc">
+<code class="sig-name descname">arc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em>, <em class="sig-param"><span class="n">radius</span></em>, <em class="sig-param"><span class="n">steps</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.arc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle in an arc</p>
+<p>The turtle will move in an arc round for angle degrees, with a given radius.
+If steps is specified the arc will be made up of that made straight sections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> – The interior angle of the arc in degrees.  If this is positive the arc moves round to the right, otherwise to the left.</p></li>
+<li><p><strong>radius</strong> – The distance from the centre of the arc</p></li>
+<li><p><strong>steps</strong> – The number of straight lines to construct the arc from (default = angle)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.backward">
+<code class="sig-name descname">backward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle backward by dist</p>
+<p>Move the turtle backwards (or forwards if negative) by dist.
+If the pen is down it will trail behind it defined by the current
+cross section and width modifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dist</strong> (<em>int</em><em>, </em><em>float</em>) – Distance to move</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.bk">
+<code class="sig-name descname">bk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.bk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle backward by dist</p>
+<p>Move the turtle backwards (or forwards if negative) by dist.
+If the pen is down it will trail behind it defined by the current
+cross section and width modifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dist</strong> (<em>int</em><em>, </em><em>float</em>) – Distance to move</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.circle">
+<code class="sig-name descname">circle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">radius</span></em>, <em class="sig-param"><span class="n">direction</span><span class="o">=</span><span class="default_value">'right'</span></em>, <em class="sig-param"><span class="n">steps</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a circle with a given radius</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius</strong> – The radius of the circle.</p></li>
+<li><p><strong>direction</strong> – The side the circle should be draw on, “right” (default) or “left”</p></li>
+<li><p><strong>steps</strong> – The number of straight lines to draw the circle from.  Default: 360</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.clean_up">
+<code class="sig-name descname">clean_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.clean_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw all outstanding Blogo instances</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.clockwise">
+<code class="sig-name descname">clockwise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.clockwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate clockwise by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to rotate clockwise by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deep_copy</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">new_location</span><span class="o">=</span><span class="default_value">(0, 0, 0)</span></em>, <em class="sig-param"><span class="n">relative_location</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the current Blogo instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deep_copy</strong> (<em>bool</em>) – If True then the existing Blender objects will be duplicated, if False the copy is still fairly deep, but no new objects</p></li>
+<li><p><strong>new_location</strong> (<em>tuple</em>) – The new location of the copy, either absolute or relative</p></li>
+<li><p><strong>relative_location</strong> (<em>bool</em>) – Indicates if new_location should be absolute or moved relative to the current turtle position</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#blogo.Blogo" title="blogo.Blogo">Blogo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.copy_pos">
+<code class="sig-name descname">copy_pos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turtle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.copy_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle and the orientation to the same as another turtle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>turtle</strong> (<em>TurtlePosition</em>) – The turtle to copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.curve_to">
+<code class="sig-name descname">curve_to</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">end_position</span></em>, <em class="sig-param"><span class="n">end_direction</span></em>, <em class="sig-param"><span class="n">start_strength</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">end_strength</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.curve_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a cubic Bézier curve between the current position and then end position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>end_position</strong> (<em>tuple</em>) – The final position of the curve</p></li>
+<li><p><strong>end_direction</strong> (<em>tuple</em>) – A vector for the tangent at the end of the curve</p></li>
+<li><p><strong>start_strength</strong> (<em>int</em><em>, </em><em>float</em>) – The proportion of the curve which should be influenced by the start direction.</p></li>
+<li><p><strong>end_strength</strong> (<em>int</em><em>, </em><em>float</em>) – The proportion of the curve which should be influenced by the end direction.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.dn">
+<code class="sig-name descname">dn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.dn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate downwards by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to rotate downwards by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.down">
+<code class="sig-name descname">down</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate downwards by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to rotate downwards by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.ellipse">
+<code class="sig-name descname">ellipse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">radius1</span></em>, <em class="sig-param"><span class="n">radius2</span></em>, <em class="sig-param"><span class="n">angle</span><span class="o">=</span><span class="default_value">360</span></em>, <em class="sig-param"><span class="n">steps</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.ellipse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw an ellipse starting at radius1 from the centre of the ellipse,
+curving to the extreme radius2 from the centre on the other axis and then looping round</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius1</strong> – Distance from centre of ellipse to starting point</p></li>
+<li><p><strong>radius2</strong> – Distance from centre of ellipse to the point on the ellipse at 90°</p></li>
+<li><p><strong>angle</strong> – Number of degrees to go round ellipse (default: complete ellipse)</p></li>
+<li><p><strong>steps</strong> – Number of straight lines to draw the ellipse from (default = angle)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.fd">
+<code class="sig-name descname">fd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.fd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle forward by dist</p>
+<p>Move the turtle forward (or backwards if negative) by dist.
+If the pen is down it will trail behind it defined by the current
+cross section and width modifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dist</strong> (<em>int</em><em>, </em><em>float</em>) – Distance to move</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.fill">
+<code class="sig-name descname">fill</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">from_value</span></em>, <em class="sig-param"><span class="n">to_value</span></em>, <em class="sig-param"><span class="n">texture</span></em>, <em class="sig-param"><span class="n">fill_type</span><span class="o">=</span><span class="default_value">'relative'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill the current shape when either finished or the pen is put up.</p>
+<p>The gap between the centre of the cross section and the limits from from_value to to_value
+is filled with the given texture.  If fill_type is ‘relative’ then the limits with be
+a floating point value (generally between 0 and 1) where 0 is the lowest point on the cross
+section and 1 is the highest point.  If the fill_type is ‘relative-reversed’ then it is the
+same as ‘relative’, but measured down from the top. If fill_type is ‘absolute’ then to_value
+and from_value refer to actual measurements from the base of the cross section.  If fill_type
+is ‘absolute-reversed’ then to_value and from_value refer to actual measurements from the top
+of the cross section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from_value</strong> – The bottom vertical position to fill from</p></li>
+<li><p><strong>to_value</strong> – The top vertical position to fill to</p></li>
+<li><p><strong>texture</strong> – The texture to fill with</p></li>
+<li><p><strong>fill_type</strong> – One of ‘relative’, ‘relative-reversed’, ‘absolute’, ‘absolute-reversed’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A mesh object, which can be passed to fill_stop to stop filling.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.fill_stop">
+<code class="sig-name descname">fill_stop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fill_mesh</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.fill_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove either all or one single fill from the current turtle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fillMesh</strong> – The mesh (returned by <cite>fill</cite> to remove, or if <cite>None</cite> then all fills will be removed (default None)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle forward by dist</p>
+<p>Move the turtle forward (or backwards if negative) by dist.
+If the pen is down it will trail behind it defined by the current
+cross section and width modifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dist</strong> (<em>int</em><em>, </em><em>float</em>) – Distance to move</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_global_origin">
+<code class="sig-name descname">get_global_origin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_global_origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the origin used by all instances of Blogo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Location of global origin</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_heading">
+<code class="sig-name descname">get_heading</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the heading angle of the turtle, from 0 to 360 degrees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The heading of the turtle</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_length_counter">
+<code class="sig-name descname">get_length_counter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_length_counter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the length counter specified by name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – The name of the length counter to return</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None if the length counter does not exist, otherwise the value of the counter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_objects">
+<code class="sig-name descname">get_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the blender objects for this turtle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of blender objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_origin">
+<code class="sig-name descname">get_origin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the origin used by this turtle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Location of local origin</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_path_position">
+<code class="sig-name descname">get_path_position</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'relative'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_path_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the position that the turtle was in a certain way along the current path.</p>
+<p>This can be used to place other objects along the route that this turtle has taken.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos</strong> – A distance along the current path</p></li>
+<li><p><strong>units</strong> – Either ‘relative’ for pos to be interpretted as the whole path between 0 and 1, or ‘absolute’ to give a distance along the path.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A position and orientation of a turtle</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>TurtlePosition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_pos">
+<code class="sig-name descname">get_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current turtle position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Value of the current position</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple (x, y, z)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_texture">
+<code class="sig-name descname">get_texture</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current texture used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The current texture</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_turtle">
+<code class="sig-name descname">get_turtle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_turtle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of the current turtle position and orientation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A copy of the current turtle position</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>TurtlePosition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_v_heading">
+<code class="sig-name descname">get_v_heading</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_v_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertical heading of the turtle, from 0 to 360 degrees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The vertical heading of the turtle</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.get_width">
+<code class="sig-name descname">get_width</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">direction</span></em>, <em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">loopCount</span><span class="o">=</span><span class="default_value">10</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.get_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the width modifier for a particular direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>direction</strong> – One of ‘left’, ‘right’, ‘above’ or ‘below’</p></li>
+<li><p><strong>cs_name</strong> – The name of the cross section affected (default=””)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.home">
+<code class="sig-name descname">home</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.home" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the turtle to the origin</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.join_objects">
+<code class="sig-name descname">join_objects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">union</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.join_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join the underlying blender objects of this turtle into one object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>union</strong> – If <cite>True</cite> the joined objects will be merged into one block with a binary operation, otherwise they will be separatable by using unjoin.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.label">
+<code class="sig-name descname">label</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a named label into the command history</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – The name to give the label - for reference in <cite>replay</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.left">
+<code class="sig-name descname">left</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn left by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to turn left by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.lt">
+<code class="sig-name descname">lt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.lt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn left by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to turn left by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.parse">
+<code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">var</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">var_name</span><span class="o">=</span><span class="default_value">'var'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>This will parse a block of text and then execute it.</p>
+<p>Any function used which is a member function in Blogo will be modified to run in the context
+of this turtle.  Any brackets missing around member functions arguments will be added.
+Thus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;fd 10; rt 90; fd 10; rt 90&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>will be executed as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">rt</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">rt</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The argument <cite>var</cite> can be a dictionary used to pass in variables and have the code block read 
+and modify them, with <cite>var_name</cite> specifying what name the dictionary is refered to by in the
+code block. e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;fd data[&quot;size&quot;];rt 90;fd data[&quot;size&quot;]&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Will move forward 10, turn right, then move forward 10 again.</p>
+<p>Any valid python can be passed in to the code block, but could get fragile if too much code 
+is passed in.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Block of code to parse</p></li>
+<li><p><strong>var</strong> – Dictionary to be able to get and set variables in code block</p></li>
+<li><p><strong>var_name</strong> – Name of the variable used to hold the dictionary in the code block</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.parse_file">
+<code class="sig-name descname">parse_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em>, <em class="sig-param"><span class="n">var</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">var_name</span><span class="o">=</span><span class="default_value">'var'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.parse_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a file and call <cite>parse</cite> with the contents of the file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> – Name of file containing a block of code to parse</p></li>
+<li><p><strong>var</strong> – Dictionary to be able to get and set variables in code block</p></li>
+<li><p><strong>var_name</strong> – Name of the variable used to hold the dictionary in the code block</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.pd">
+<code class="sig-name descname">pd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.pd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put the pen down.</p>
+<p>Putting the pen down means that a trail will be left behind the turtle in the shape
+of the current cross section.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.pen_down">
+<code class="sig-name descname">pen_down</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.pen_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put the pen down.</p>
+<p>Putting the pen down means that a trail will be left behind the turtle in the shape
+of the current cross section.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.pen_up">
+<code class="sig-name descname">pen_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.pen_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put the pen up.</p>
+<p>Putting the pen up means that a trail will not be left behind the turtle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.polygon">
+<code class="sig-name descname">polygon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sides</span></em>, <em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">angles</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a polygon with a given number of sides.</p>
+<p>Draws a polygon.  If the number of lengths or angles given is equal to the number of sides,
+then the polygon may not be closed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sides</strong> – The number of sides the polygon should have</p></li>
+<li><p><strong>lengths</strong> – Either an int/float giving the length of every side, or a list of the lengths of each side</p></li>
+<li><p><strong>angles</strong> – If given then either an int/float giving every angle, or a list of the angles after each side.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.pu">
+<code class="sig-name descname">pu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.pu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put the pen up.</p>
+<p>Putting the pen up means that a trail will not be left behind the turtle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.rectangle">
+<code class="sig-name descname">rectangle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">length1</span></em>, <em class="sig-param"><span class="n">length2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a rectangle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length1</strong> – The length of the first and third sides</p></li>
+<li><p><strong>length2</strong> – The length of the second and fourth sides</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.remove_follower">
+<code class="sig-name descname">remove_follower</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turtle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.remove_follower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a follower turtle that has been added with <cite>add_follower</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>turtle</strong> (<a class="reference internal" href="#blogo.Blogo" title="blogo.Blogo"><em>Blogo</em></a>) – The turtle who should not follow the current turtle.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.remove_gap">
+<code class="sig-name descname">remove_gap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.remove_gap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a gap that has been previously added by`add_gap`</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – The name of the gap to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.remove_width_func">
+<code class="sig-name descname">remove_width_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">remove_all</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.remove_width_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove either a specific width function from a side, or remove all width functions from that side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The side of the cross section to deal with.  This can be a single side, (‘left’, ‘right’, ‘above’, ‘below’) or it can be a list of those sides or it can be a description of multiple sides (‘sides’, ‘verticals’, ‘all’)</p></li>
+<li><p><strong>func</strong> – The function to remove, or <cite>None</cite> to remove all functions</p></li>
+<li><p><strong>remove_all</strong> – If <cite>True</cite> then if a function has been added more than once then all will be removed, otherwise only the first occurance will be. (default: True)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.replay">
+<code class="sig-name descname">replay</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turtle</span></em>, <em class="sig-param"><span class="n">from_label</span><span class="o">=</span><span class="default_value">'start'</span></em>, <em class="sig-param"><span class="n">to_label</span><span class="o">=</span><span class="default_value">'end'</span></em>, <em class="sig-param"><span class="n">allowed_command_types</span><span class="o">=</span><span class="default_value">'all'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.replay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replay a number of commands from this turtle in another turtle’s context</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>turtle</strong> – </p></li>
+<li><p><strong>from_label</strong> – </p></li>
+<li><p><strong>to_label</strong> – </p></li>
+<li><p><strong>allowed_command_types</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">init</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the turtle to the origin and remove all modifiers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.reset_cross_section">
+<code class="sig-name descname">reset_cross_section</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.reset_cross_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the cross section to a square</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.reset_length_counter">
+<code class="sig-name descname">reset_length_counter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">include_bk</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">include_pu</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">0.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.reset_length_counter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset a value used by a length counter</p>
+<p>Sets the given length counter to value, specifies how backward movements should be treated,
+and whether the counter should be increased when the pen is up.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – The name of the length counter to reset</p></li>
+<li><p><strong>include_bk</strong> (<em>int</em>) – 0 to ignore backwards movements, 1 to include backwards movements, -1 to subtract backwards movements</p></li>
+<li><p><strong>include_pu</strong> (<em>bool</em>) – True to increase the counter when the pen is up, False to leave the counter when the pen is up</p></li>
+<li><p><strong>value</strong> (<em>int</em><em>, </em><em>float</em>) – The value to reset the counter to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.reset_multipliers">
+<code class="sig-name descname">reset_multipliers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.reset_multipliers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset width multipliers to 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.right">
+<code class="sig-name descname">right</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn right by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to turn right by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.rt">
+<code class="sig-name descname">rt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.rt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn right by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to turn right by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_alpha">
+<code class="sig-name descname">set_alpha</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alpha</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the alpha (transparency) value for the current texture.</p>
+<p>If a texture is a rgba colour tuple, then this value will be multiplied by the tuple alpha value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alpha</strong> – A value between 0 (completely transparent) and 1 (completely opaque) to set the texture alpha to</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_cross_section">
+<code class="sig-name descname">set_cross_section</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shape</span></em>, <em class="sig-param"><span class="n">multiplier_h</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">multiplier_v</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_cross_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the cross section shape of the current turtle.</p>
+<p>The shape can either be a list of two dimensional points or one of ‘square’ or ‘circleN’, where
+N is an integer specifying how many points the circle should be made up of (just ‘circle’ will
+use a value of N=100).</p>
+<p>A ‘square’ cross section will create a unit square from (-0.5, -0.5) to (0.5, 0.5)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shape</strong> – Either a list of points or ‘square’, ‘circle’, ‘circle10’, ‘circle500’, etc</p></li>
+<li><p><strong>multiplier_h</strong> – A multiplier to multiply the left and right by (default: 1.0)</p></li>
+<li><p><strong>multiplier_v</strong> – A multiplier to multiply the top and bottom by.  If <cite>None</cite> it will use the same value as multiplier_h (default: None)</p></li>
+<li><p><strong>name</strong> – The name of the cross section to change</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_fill_smart_project">
+<code class="sig-name descname">set_fill_smart_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">smart_project</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_fill_smart_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the fill texture should be smart projected.</p>
+<p>Some textured Blogo shapes look better with smart project on, but it will take longer to create the objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>smart_project</strong> – True or False depending on whether to smart project the fill texture or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_fill_texture_scale">
+<code class="sig-name descname">set_fill_texture_scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">texture_scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_fill_texture_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the texture scale of the current fill.</p>
+<p>When using a image as a fill texture this will scale the image.  A value of 0 will give an attempt 
+to scale the image proportionally to the size of the object.  Any other number will scale the image
+by that amount.  A value of <cite>None</cite> will leave the scale as Blender’s default.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>texture_scale</strong> – The scale factor to use, or 0 for auto.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_fill_unwrap">
+<code class="sig-name descname">set_fill_unwrap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">unwrap</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_fill_unwrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the mesh should be unwrapped before applying the texture to the current fill.</p>
+<p>Some textured Blogo shapes look better with unwrapping on, but it will take longer to create the objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>unwrap</strong> – True or False depending on whether to unwrap the object before applying the fill texture or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_global_origin">
+<code class="sig-name descname">set_global_origin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">origin_y</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">origin_z</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_global_origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the origin used by all instances of Blogo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>origin</strong> (<em>tuple</em><em>, </em><em>int</em><em>, </em><em>float</em>) – Either a tuple containing the origin’s location or the x location</p></li>
+<li><p><strong>origin_y</strong> (<em>int</em><em>, </em><em>float</em>) – y coordinate of the origin (defaults to either 0 or value given in origin if tuple)</p></li>
+<li><p><strong>origin_z</strong> (<em>int</em><em>, </em><em>float</em>) – z coordinate of the origin (defaults to either 0 or value given in origin if tuple)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_heading">
+<code class="sig-name descname">set_heading</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the heading angle of the turtle, from 0 to 360 degrees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – The new heading, 0 - 360 or ‘north’, ‘east’, ‘south’, ‘west’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_heading_towards">
+<code class="sig-name descname">set_heading_towards</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coord</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_heading_towards" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the heading to be towards the given coordinate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coord</strong> – A tuple giving a position</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_heading_vec">
+<code class="sig-name descname">set_heading_vec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_heading_vec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the heading to be the same as the given vector</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vec</strong> – A tuple giving a vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_height">
+<code class="sig-name descname">set_height</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set one or more of the width modifiers to a named value.</p>
+<p>If only a number parameter is supplied then it will set both above and below to that
+multiplier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name or names of the sides to set, or a value to set above and below to if a number</p></li>
+<li><p><strong>value</strong> – The value to set the modifier to.  The cross section distance from the middle is multiplied by this value</p></li>
+<li><p><strong>cs_name</strong> – The name of the cross section affected (default=””)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_length_incr">
+<code class="sig-name descname">set_length_incr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">incr</span></em>, <em class="sig-param"><span class="n">incr_mul</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_length_incr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set how often any width functions should be called when moving forwards or backwards.</p>
+<p>The incr value gives a maximum distance to move before recalculating the width.  The
+incr_mul value gives the maximum proportion of the line to move before recalculating.
+For example, incr=0.1 and incr_mul=0.01 will mean that to draw a line 8 long, incr says
+width must be recalculated every 0.1, but incr_mul says it must be done every 0.08, therefore
+the forward will be done in steps of 0.08.  To draw a line 80 long, incr says it must be
+done in steps of 0.1, but incr_mul says the steps should be no longer than 0.8 - therefore
+the forward will be done in steps of 0.1</p>
+<p>If either incr or incr_mul are <cite>None</cite> then their values will not be changed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>incr</strong> – An absolute maximum length of step before recalulating the width of the line.</p></li>
+<li><p><strong>incr_mul</strong> – A maximum length of step before recalulating the width of the line, relative to the length of the line</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_origin">
+<code class="sig-name descname">set_origin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">origin_y</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">origin_z</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the origin used by this turtle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>origin</strong> (<em>tuple</em><em>, </em><em>int</em><em>, </em><em>float</em>) – Either a tuple containing the origin’s location or the x location</p></li>
+<li><p><strong>origin_y</strong> (<em>int</em><em>, </em><em>float</em>) – y coordinate of the origin (defaults to either 0 or value given in origin if tuple)</p></li>
+<li><p><strong>origin_z</strong> (<em>int</em><em>, </em><em>float</em>) – z coordinate of the origin (defaults to either 0 or value given in origin if tuple)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_pos">
+<code class="sig-name descname">set_pos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">position</span></em>, <em class="sig-param"><span class="n">move_type</span><span class="o">=</span><span class="default_value">'absolutely-relative'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the turtle.</p>
+<p>If any values in the position tuple are left out or set to None then the current position in
+that axis will be kept.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> (<em>tuple</em>) – A tuple of the position to move to</p></li>
+<li><p><strong>move_type</strong> – One of ‘absolute’ (move to that location), ‘relative’ (move by that much) or ‘absolutely-relative’ (move to that position, but any followers should move by the relative equivalent)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_smart_project">
+<code class="sig-name descname">set_smart_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">smart_project</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_smart_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the texture should be smart projected.</p>
+<p>Some textured Blogo shapes look better with smart project on, but it will take longer to create the objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>smart_project</strong> – True or False depending on whether to smart project the texture or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_texture">
+<code class="sig-name descname">set_texture</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">texture</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a new texture for the cross section to be drawn covered in.</p>
+<p>The texture can be a tuple of rgb colours (each in range 0 -&gt; 1), or a named colour
+or an image filename.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>texture</strong> – The texture to use.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_texture_scale">
+<code class="sig-name descname">set_texture_scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">texture_scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_texture_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the texture scale.</p>
+<p>When using a image as a texture this will scale the image.  A value of 0 will give an attempt to scale
+the image proportionally to the size of the object.  Any other number will scale the image by that
+amount.  A value of <cite>None</cite> will leave the scale as Blender’s default.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>texture_scale</strong> – The scale factor to use, or 0 for auto.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_turtle">
+<code class="sig-name descname">set_turtle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turtle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_turtle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the turtle position to a copy of turtle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>turtle</strong> (<em>TurtlePosition</em>) – The turtle to copy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_unwrap">
+<code class="sig-name descname">set_unwrap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">unwrap</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_unwrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the mesh should be unwrapped before applying the texture.</p>
+<p>Some textured Blogo shapes look better with unwrapping on, but it will take longer to create the objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>unwrap</strong> – True or False depending on whether to unwrap the object before applying the texture or not.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_v_heading">
+<code class="sig-name descname">set_v_heading</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_v_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the heading of the turtle, from 0 to 360 degrees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – The new vertical heading, 0 - 360 or ‘up’, ‘backward’, ‘down’, ‘forward’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_v_heading_towards">
+<code class="sig-name descname">set_v_heading_towards</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coord</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_v_heading_towards" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the heading to be towards the given coordinate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coord</strong> – A tuple giving a position</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_v_heading_vec">
+<code class="sig-name descname">set_v_heading_vec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_v_heading_vec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the heading to be the same as the given vector</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vec</strong> – A tuple giving a vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_width">
+<code class="sig-name descname">set_width</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">cs_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set one or more of the width modifiers to a named value.</p>
+<p>If only a number parameter is supplied then it will set both left and right to that
+multiplier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name or names of the sides to set, or a value to set left and right to if a number</p></li>
+<li><p><strong>value</strong> – The value to set the modifier to.  The cross section distance from the middle is multiplied by this value</p></li>
+<li><p><strong>cs_name</strong> – The name of the cross section affected (default=””)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_x">
+<code class="sig-name descname">set_x</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the x axis position of the turtle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – The position to set the turtle on the x axis</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_xy">
+<code class="sig-name descname">set_xy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_xy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the turtle without changing the z axis position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The position to set the turtle on the x axis</p></li>
+<li><p><strong>y</strong> – The position to set the turtle on the y axis</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_xyz">
+<code class="sig-name descname">set_xyz</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_xyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the turtle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The position to set the turtle on the x axis</p></li>
+<li><p><strong>y</strong> – The position to set the turtle on the y axis</p></li>
+<li><p><strong>z</strong> – The position to set the turtle on the z axis</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_xz">
+<code class="sig-name descname">set_xz</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_xz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the turtle without changing the y axis position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The position to set the turtle on the x axis</p></li>
+<li><p><strong>z</strong> – The position to set the turtle on the z axis</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_y">
+<code class="sig-name descname">set_y</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the y axis position of the turtle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>y</strong> – The position to set the turtle on the y axis</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_yz">
+<code class="sig-name descname">set_yz</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_yz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the turtle without changing the x axis position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> – The position to set the turtle on the y axis</p></li>
+<li><p><strong>z</strong> – The position to set the turtle on the z axis</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.set_z">
+<code class="sig-name descname">set_z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.set_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the z axis position of the turtle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>z</strong> – The position to set the turtle on the z axis</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.square">
+<code class="sig-name descname">square</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.square" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a polygon with four equal sides</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>length</strong> – The length of the sides.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.strafe">
+<code class="sig-name descname">strafe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.strafe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle sideways by dist</p>
+<p>Move the turtle sideways by dist.
+If the pen is down it will trail behind it defined by the current
+cross section and width modifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dist</strong> (<em>int</em><em>, </em><em>float</em>) – Distance to move</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.strafe_v">
+<code class="sig-name descname">strafe_v</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dist</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.strafe_v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the turtle upwards by dist</p>
+<p>Move the turtle upwards (or down if negative) by dist.
+If the pen is down it will trail behind it defined by the current
+cross section and width modifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dist</strong> (<em>int</em><em>, </em><em>float</em>) – Distance to move</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.tilt_h">
+<code class="sig-name descname">tilt_h</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.tilt_h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tilt the cross section in the horizontal axis by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to tilt horizontally by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.tilt_r">
+<code class="sig-name descname">tilt_r</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.tilt_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Roll the cross section by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to roll by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.tilt_v">
+<code class="sig-name descname">tilt_v</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.tilt_v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tilt the cross section in the vertical axis by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to tilt vertically by</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.triangle">
+<code class="sig-name descname">triangle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">length</span></em>, <em class="sig-param"><span class="n">angles</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a three sided polygon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> – Either an int/float giving the length for an equilateral triangle, or a list giving the length of the sides.</p></li>
+<li><p><strong>angles</strong> – If not given then a closed triangle will be drawn from the given lengths, otherwise an int/float or list of angles (triangle may not be closed)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo.Blogo.up">
+<code class="sig-name descname">up</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo.Blogo.up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate upwards by angle degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – Number of degrees to rotate upwards by</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 </div>
 

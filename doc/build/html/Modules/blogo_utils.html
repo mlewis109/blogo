@@ -163,10 +163,369 @@
             
   <div class="section" id="module-blogo_utils">
 <span id="blogo-utils"></span><h1>Blogo Utils<a class="headerlink" href="#module-blogo_utils" title="Permalink to this headline">¶</a></h1>
-<dl class="py attribute">
+<dl class="py class">
 <dt id="blogo_utils.BlogoUtils">
-<code class="sig-prename descclassname">blogo_utils.</code><code class="sig-name descname">BlogoUtils</code><a class="headerlink" href="#blogo_utils.BlogoUtils" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<em class="property">class </em><code class="sig-prename descclassname">blogo_utils.</code><code class="sig-name descname">BlogoUtils</code><a class="headerlink" href="#blogo_utils.BlogoUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class of useful helper functions to be used when programming with Blender</p>
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.add_blend_file">
+<code class="sig-name descname">add_blend_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coll_name</span></em>, <em class="sig-param"><span class="n">link</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.add_blend_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a .blend file and put in the current scene</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> – The name of the file to load</p></li>
+<li><p><strong>coll_name</strong> – The collection name to add it to</p></li>
+<li><p><strong>link</strong> – If true then the file is only linked, otherwise it is appended</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.add_camera">
+<code class="sig-name descname">add_camera</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">from_location</span></em>, <em class="sig-param"><span class="n">central_locations</span></em>, <em class="sig-param"><span class="n">capture_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">angle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roll</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.add_camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Place a camera at a particular location and point it at another location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from_location</strong> – The location of the camera</p></li>
+<li><p><strong>central_locations</strong> – A list of locations to point the camera towards the middle of</p></li>
+<li><p><strong>capture_locations</strong> – A list of locations that should be in frame (not yet implemented)</p></li>
+<li><p><strong>angle</strong> – The angle in radians over which the camera should capture</p></li>
+<li><p><strong>roll</strong> – The angle in radians to roll the camera round</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.add_light">
+<code class="sig-name descname">add_light</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span></em>, <em class="sig-param"><span class="n">point_at</span></em>, <em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">energy</span></em>, <em class="sig-param"><span class="n">type</span></em>, <em class="sig-param"><span class="n">shape</span></em>, <em class="sig-param"><span class="n">use_shadow</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.add_light" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a light to a scene</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – </p></li>
+<li><p><strong>location</strong> – </p></li>
+<li><p><strong>point_at</strong> – </p></li>
+<li><p><strong>size</strong> – </p></li>
+<li><p><strong>energy</strong> – </p></li>
+<li><p><strong>type</strong> – </p></li>
+<li><p><strong>shape</strong> – </p></li>
+<li><p><strong>use_shadow</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.add_light_area">
+<code class="sig-name descname">add_light_area</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">(0, 0, 3218.68)</span></em>, <em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">10000</span></em>, <em class="sig-param"><span class="n">energy</span><span class="o">=</span><span class="default_value">1210000000.0</span></em>, <em class="sig-param"><span class="n">shape</span><span class="o">=</span><span class="default_value">'SQUARE'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.add_light_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a light in the form of a plane</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – </p></li>
+<li><p><strong>location</strong> – </p></li>
+<li><p><strong>size</strong> – </p></li>
+<li><p><strong>energy</strong> – </p></li>
+<li><p><strong>shape</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.add_light_bulb">
+<code class="sig-name descname">add_light_bulb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">(0, 0, 3218.68)</span></em>, <em class="sig-param"><span class="n">angle</span><span class="o">=</span><span class="default_value">120</span></em>, <em class="sig-param"><span class="n">energy</span><span class="o">=</span><span class="default_value">100</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.add_light_bulb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a spot light to a scene</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – </p></li>
+<li><p><strong>location</strong> – </p></li>
+<li><p><strong>angle</strong> – </p></li>
+<li><p><strong>energy</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.add_locations">
+<code class="sig-name descname">add_locations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location2</span></em>, <em class="sig-param"><span class="n">mul2</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">mul1</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.add_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add two locations or vectors together</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.add_texture">
+<code class="sig-name descname">add_texture</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">textureFile</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">unwrap</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">smart_project</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">texture_scale</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.add_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add texture to an object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.angle_between">
+<code class="sig-name descname">angle_between</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.angle_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the angle between two vectors</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.boolean_op">
+<code class="sig-name descname">boolean_op</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">op</span></em>, <em class="sig-param"><span class="n">b_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.boolean_op" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform either union, intersection or difference between two objects or lists of objects</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_list</strong> – Either a blender object, or a list of blender objects</p></li>
+<li><p><strong>op</strong> – The operation to perform, one of ‘DIFFERENCE’, ‘UNION’ or ‘INTERSECTION’</p></li>
+<li><p><strong>b_list</strong> – Either a blender object, or a list of blender objects</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.clear_info">
+<code class="sig-name descname">clear_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.clear_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all lines from the info screen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.copy_object">
+<code class="sig-name descname">copy_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span></em>, <em class="sig-param"><span class="n">relative_location</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">copy_mesh</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.copy_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy an object and insert it into a new location</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.create_object">
+<code class="sig-name descname">create_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vertices</span></em>, <em class="sig-param"><span class="n">faces</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.create_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an object from a list vertices and faces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.cross_product">
+<code class="sig-name descname">cross_product</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.cross_product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the cross product of two vectors</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.dot_product">
+<code class="sig-name descname">dot_product</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.dot_product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dot product of two vectors</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.draw_mesh">
+<code class="sig-name descname">draw_mesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vertices</span></em>, <em class="sig-param"><span class="n">faces</span></em>, <em class="sig-param"><span class="n">textureFile</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">unwrap</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">smart_project</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">texture_scale</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.draw_mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an object from the given lists of vertices and faces and with the given texture</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.draw_plane_from_func">
+<code class="sig-name descname">draw_plane_from_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">pts</span></em>, <em class="sig-param"><span class="n">closed_x</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">closed_y</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">texture</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.draw_plane_from_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw an object defined by a function giving the position of either point in the grid of the plane.</p>
+<dl class="simple">
+<dt>The function given should be of the form: def my_func(x, y, rx, ry, **kwargs):</dt><dd><p>where x, y is the current position in the plane, and rx, ry is the position in the plane from 0 to 1</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name the new object will have</p></li>
+<li><p><strong>func</strong> – A function to pass each point in the plane to</p></li>
+<li><p><strong>pts</strong> – A tuple giving either (x_max, y_max) or (x_min, y_min, x_max, y_max).  x_min and y_min default to 0</p></li>
+<li><p><strong>closed_x</strong> – If True then the in the x direction 0 will be connected to max_x (default False)</p></li>
+<li><p><strong>closed_y</strong> – If True then the in the y direction 0 will be connected to max_y (default False)</p></li>
+<li><p><strong>texture</strong> – The texture to draw on the plane</p></li>
+<li><p><strong>kwargs</strong> – User data to pass on to func</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.get_projected_angle">
+<code class="sig-name descname">get_projected_angle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec_on_plane</span></em>, <em class="sig-param"><span class="n">plane_normal</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.get_projected_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the angle between the component of vector on a plane and a vector on that plane</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.hide_cameras_and_lights">
+<code class="sig-name descname">hide_cameras_and_lights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.hide_cameras_and_lights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the renderer from showing camera and light objects, but still show their light</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.is_sequence">
+<code class="sig-name descname">is_sequence</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.is_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tell whether a variable is a sequence, i.e. a list or tuple</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.join_objects">
+<code class="sig-name descname">join_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.join_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join multiple objects together</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.line_length">
+<code class="sig-name descname">line_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.line_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the length of a line</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.list_missing">
+<code class="sig-name descname">list_missing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">partial_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.list_missing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the items that are in full_list, but not in partial_list</p>
+<p>e.g. list_missing((1, 2, 3, 4), (1, 3, 5)) ==&gt; (2, 4)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_list</strong> – The full list of items</p></li>
+<li><p><strong>partial_list</strong> – full_list with some items missing</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The difference between the lists</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.mode_set">
+<code class="sig-name descname">mode_set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.mode_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the given mode, e.g. “OBJECT” or “EDIT”</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.norm">
+<code class="sig-name descname">norm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the norm of the vector</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.normalize">
+<code class="sig-name descname">normalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalise a vector</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.normalize_angle">
+<code class="sig-name descname">normalize_angle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.normalize_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an angle between 0 and 360 giving the same heading as angle</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.object_counter">
+<code class="sig-name descname">object_counter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.object_counter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique number</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.project_onto_plane">
+<code class="sig-name descname">project_onto_plane</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">normal</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.project_onto_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project a vector onto a plane defined by a normal to that plane</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.rotate_axis">
+<code class="sig-name descname">rotate_axis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span></em>, <em class="sig-param"><span class="n">angle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.rotate_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate a vector around an axis by an angle in degrees</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.rotation_matrix">
+<code class="sig-name descname">rotation_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">theta</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.rotation_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the rotation matrix associated with counterclockwise rotation about
+the given axis by theta radians.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.select_object">
+<code class="sig-name descname">select_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'EDIT'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.select_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a single object and move into a new mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.select_objects">
+<code class="sig-name descname">select_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.select_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select all objects</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.show_objects">
+<code class="sig-name descname">show_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.show_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move to the screen showing rendered objects</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.smart_project_object">
+<code class="sig-name descname">smart_project_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.smart_project_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run smart project for an object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.start_fresh">
+<code class="sig-name descname">start_fresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.start_fresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete everything, so that we can start again</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.take_picture">
+<code class="sig-name descname">take_picture</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">from_location</span></em>, <em class="sig-param"><span class="n">central_locations</span></em>, <em class="sig-param"><span class="n">capture_locations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">angle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roll</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.take_picture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Place a camera at a particular location, point it at another location and save that picture to disk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> – The name of the file to save to.</p></li>
+<li><p><strong>from_location</strong> – The location of the camera</p></li>
+<li><p><strong>central_locations</strong> – A list of locations to point the camera towards the middle of</p></li>
+<li><p><strong>capture_locations</strong> – A list of locations that should be in frame (not yet implemented)</p></li>
+<li><p><strong>angle</strong> – The angle in radians over which the camera should capture</p></li>
+<li><p><strong>roll</strong> – The angle in radians to roll the camera round</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.unit_vector">
+<code class="sig-name descname">unit_vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.unit_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit vector of a vector</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.unselect_object">
+<code class="sig-name descname">unselect_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prev_mode</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.unselect_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unselect an object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.unselect_objects">
+<code class="sig-name descname">unselect_objects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.unselect_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unselect all objects</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blogo_utils.BlogoUtils.unwrap_object">
+<code class="sig-name descname">unwrap_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blogo_utils.BlogoUtils.unwrap_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run UV unwrap for an object</p>
+</dd></dl>
+
+</dd></dl>
 
 </div>
 
